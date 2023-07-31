@@ -1,10 +1,12 @@
 import { Category } from "@/types";
 
-const URL = `${process.env.NEXT_PUBLIC_API_URL}/categories`;
+const BASE_URL = `${process.env.NEXT_PUBLIC_API_URL}/categories`;
 
 const getCategories = async (): Promise<Category[]> => {
   try {
-    const res = await fetch(URL);
+    const res = await fetch(BASE_URL, {
+      method: "GET",
+    });
     if (!res.ok) {
       throw new Error("Network response was not ok.");
     }
