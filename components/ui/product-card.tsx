@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import { Product } from "@/types";
 import IconButton from "@/components/ui/icon-button";
 import Currency from "@/components/ui/currency";
-import usePreviewModal from "@/modals/use-preview-modal";
+import usePreviewModal from "@/hooks/use-preview-modal";
 
 interface ProductCardProps {
   data: Product;

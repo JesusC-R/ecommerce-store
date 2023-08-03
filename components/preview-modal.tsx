@@ -1,12 +1,16 @@
 "use client";
 
-import usePreviewModal from "@/modals/use-preview-modal";
+import usePreviewModal from "@/hooks/use-preview-modal";
 import Modal from "@/components/ui/modal";
 import Gallery from "@/components/gallery";
 import Info from "@/components/info";
 
 const PreviewModal = () => {
   const previewModal = usePreviewModal();
+
+  // retrieves the value of the data property from the state
+  // managed by the usePreviewModal hook and stores it in the
+  // product variable.
   const product = usePreviewModal((state) => state.data);
 
   if (!product) {
