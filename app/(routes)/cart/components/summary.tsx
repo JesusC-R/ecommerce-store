@@ -48,7 +48,7 @@ const Summary = () => {
         <div className="text-base font-medium text-gray-900">Order total</div>
         <Currency value={totalPrice.toString()} />
       </div>
-      <Button onClick={onCheckout} className="w-full mt-6">Checkout</Button>
+      <Button disabled={items.length === 0} onClick={onCheckout} className="w-full mt-6">Checkout</Button>
     </div>
   );
 };
