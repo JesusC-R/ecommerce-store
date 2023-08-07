@@ -4,7 +4,7 @@ import Billboard from "@/components/billboard";
 import getProducts from "@/actions/get-products";
 import ProductList from "@/components/product-list";
 
-export const revalidation = 0;
+export const revalidate = 0;
 
 const HomePage = async () => {
   const featuredProducts = await getProducts({ isFeatured: true });
